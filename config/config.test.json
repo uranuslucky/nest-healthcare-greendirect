@@ -1,0 +1,101 @@
+{
+  "http": {
+    "port": 5050
+  },
+  "jwt": {
+    "secret": "my-secret-test",
+    "expiresIn": "1y"
+  },
+  "api": {
+    "explorer": true,
+    "explorerPath": "/explorer"
+  },
+  "aws": {
+    "accessKeyId": "AKIATQVGNTK6KBTYLKOB",
+    "secretAccessKey": "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",
+    "region": "us-west-2"
+  },
+  "database": {
+    "type": "postgres",
+    "host": "localhost",
+    "port": 50505,
+    "username": "root",
+    "password": "l0c4lp4ss",
+    "database": "greendirect-test",
+    "poolMax": 10,
+    "ssl": false,
+    "logging": ["warn", "error"]
+  },
+  "notification": {
+    "aws": {
+      "sns": {
+        "endpoint": "http://127.0.0.1:5058",
+        "topicArn": "arn:aws:sns:us-west-2:000000000000:LOCALSTACK_GENERAL"
+      }
+    }
+  },
+  "email": {
+    "from": "no-reply@greendirect.com",
+    "contactUs": "isbxmail+GDCONTACTUSTEST@gmail.com",
+    "settings": {
+      "SES": true
+    },
+    "clientBaseUrl": "https://127.0.0.1:5055",
+    "forceEmbeddedImages": false,
+    "templateDir": "/public/templates",
+    "templateEngine": "PUG",
+    "registration": {
+      "isEmailVerification": false
+    }
+  },
+  "vendors": {
+    "googleMaps": {
+      "apiKey": "AIzaSyB-47g5M26pYAdNCGY0Llo13w3dATg5eko"
+    },
+    "stripe": {
+      "apiVersion": "2020-03-02",
+      "apiSecretKey": "sk_test_4O18DZiH6xZz7b4Dy7GkkNgM006mqb1PcO",
+      "messagingFee": "0.05"
+    }
+  },
+  "storage": {
+    "endpoint": "http://127.0.0.1:5058",
+    "aws": {
+      "s3": {
+        "apiVersion": "2006-03-01",
+        "region": "us-west-2",
+        "bucket": "greendirect-s3-test",
+        "endpoint": "http://127.0.0.1:5058",
+        "s3ForcePathStyle": true,
+        "useAccelerateEndpoint": true,
+        "accessKeyId": "your_aws_access_key",
+        "secretAccessKey": "your_aws_secret_key"
+      }
+    }
+  },
+  "client": {
+    "aws": {
+      "accessKeyId": "AKIATQVGNTK6KBTYLKOB",
+      "secretAccessKey": "LYyUJ63E29DcVDT6Yb50f+HDhMsfCMHi0VksxJfE",
+      "region": "us-east-1",
+      "bucket": "staging2.greendirect.com"
+    }
+  },
+  "analytics": {
+    "appstore": {
+      "appSKU": "greendirect_ios",
+      "apiKey": "",
+      "issuerId": "",
+      "vendorNumber": ""
+    },
+    "googleplay": {
+      "clientEmail": "",
+      "bucketId": "",
+      "appPackageName": ""
+    },
+    "google": {
+      "clientEmail": "gd-service-api@modular-bucksaw-260506.iam.gserviceaccount.com",
+      "viewId": "194404132"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "http": {
+    "port": 5150
+  },
+  "jwt": {
+    "secret": "my-secret-test-auto",
+    "expiresIn": "1y"
+  },
+  "api": {
+    "explorer": true,
+    "explorerPath": "/explorer"
+  },
+  "database": {
+    "type": "postgres",
+    "host": "localhost",
+    "port": 51505,
+    "username": "root",
+    "password": "l0c4lp4ss",
+    "database": "greendirect-auto",
+    "poolMax": 10,
+    "ssl": false,
+    "logging": ["warn", "error", "info"]
+  },
+  "vendors": {
+    "googleMaps": {
+      "apiKey": "AIzaSyB-47g5M26pYAdNCGY0Llo13w3dATg5eko"
+    }
+  },
+  "storage": {
+    "endpoint": "http://localhost:5154",
+    "aws": {
+      "s3": {
+        "apiVersion": "2006-03-01",
+        "region": "us-west-2",
+        "bucket": "greendirect-s3-auto",
+        "endpoint": "http://localhost:5157",
+        "s3ForcePathStyle": true,
+        "useAccelerateEndpoint": true,
+        "accessKeyId": "your_aws_access_key",
+        "secretAccessKey": "your_aws_secret_key"
+      }
+    }
+  }
+}

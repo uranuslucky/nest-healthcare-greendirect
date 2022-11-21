@@ -1,0 +1,22 @@
+{
+  "deploy": {
+    "projectName": "greendirect",
+    "aws": {
+      "accessKeyId": "AKIATQVGNTK6IQQ3VLEW",
+      "secretAccessKey": "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",
+      "region": "us-west-2",
+      "s3": {
+        "bucket": "greendirect-api-production"
+      },
+      "ecr": {
+        "uri": "241940929212.dkr.ecr.us-west-2.amazonaws.com/greendirect-prod",
+        "tag": "latest"
+      },
+      "ecs": {
+        "service": "greendirect-prod-service",
+        "cluster": "greendirect-prod-cluster"
+      }
+    },
+    "npmToken": "e82123ae-aaff-41c5-a3f9-c5b82e5c1624"
+  }
+}

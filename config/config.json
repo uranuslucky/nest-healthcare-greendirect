@@ -1,0 +1,102 @@
+{
+  "http": {
+    "port": "ENV:HTTP_PORT"
+  },
+  "jwt": {
+    "secret": "my-secret",
+    "expiresIn": "1y"
+  },
+  "api": {
+    "basePath": "/api",
+    "explorer": false
+  },
+  "aws": {
+    "accessKeyId": "AKIATQVGNTK6KBTYLKOB",
+    "secretAccessKey": "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",
+    "region": "us-west-2"
+  },
+  "salt": "cms4lt4593!",
+  "cookie": {
+    "secret": "supersecret"
+  },
+  "database": {
+    "type": "postgres",
+    "host": "ENV:DB_HOST",
+    "port": "ENV:DB_PORT",
+    "username": "ENV:DB_USER",
+    "password": "ENV:DB_PASSWORD",
+    "database": "ENV:DB_NAME",
+    "poolMax": 100,
+    "ssl": true
+  },
+  "notification": {
+    "aws": {
+      "sns": {
+        "topicArn": "arn:aws:sns:us-west-2:241940929212:greendirect-development"
+      }
+    }
+  },
+  "email": {
+    "from": "no-reply@greendirect.com",
+    "contactUs": "info@greendirect.com",
+    "deals": "deals@greendirect.com",
+    "techSupport": "greendirect@isbx.com",
+    "settings": {
+      "SES": true,
+      "pool": true,
+      "host": "smtp.example.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "username",
+        "pass": "password"
+      }
+    },
+    "clientBaseUrl": "https://staging2.greendirect.com",
+    "forceEmbeddedImages": false,
+    "templateDir": "/public/templates",
+    "templateEngine": "PUG",
+    "registration": {
+      "isEmailVerification": false
+    }
+  },
+  "pagination": {
+    "defaultPageSize": 100,
+    "maxPageSize": 200
+  },
+  "password": {
+    "rounds": 14
+  },
+  "client": {
+    "aws": {
+      "accessKeyId": "AKIATQVGNTK6KBTYLKOB",
+      "secretAccessKey": "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",
+      "region": "us-east-1",
+      "bucket": "staging.greendirect.com"
+    }
+  },
+  "analytics": {
+    "appstore": {
+      "appSKU": "greendirect_ios",
+      "apiKey": "",
+      "issuerId": "",
+      "vendorNumber": ""
+    },
+    "googleplay": {
+      "clientEmail": "",
+      "bucketId": "",
+      "appPackageName": ""
+    },
+    "google": {
+      "clientEmail": "",
+      "viewId": ""
+    }
+  },
+  "vendors": {
+    "stripe": {
+      "apiVersion": "",
+      "apiSecretKey": "",
+      "messagingFee": ""
+    }
+  }
+}

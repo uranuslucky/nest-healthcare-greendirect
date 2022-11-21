@@ -1,0 +1,106 @@
+{
+  "http": {
+    "port": 3000
+  },
+  "cors": {
+    "origin": "https://staging2.greendirect.com"
+  },
+  "api": {
+    "explorer": false,
+    "explorerPath": "/explorer"
+  },
+  "aws": {
+    "accessKeyId": "AKIATQVGNTK6COEACUNU",
+    "secretAccessKey": "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",
+    "region": "us-west-2"
+  },
+  "database": {
+    "type": "postgres",
+    "host": "greendirect-staging2.cjoezwankwzc.us-west-2.rds.amazonaws.com",
+    "port": 5432,
+    "username": "root",
+    "password": "irqXn8KDA",
+    "database": "greendirect",
+    "poolMax": 10,
+    "ssl": false
+  },
+  "vendors": {
+    "googleMaps": {
+      "apiKey": "AIzaSyB-47g5M26pYAdNCGY0Llo13w3dATg5eko"
+    },
+    "stripe": {
+      "apiVersion": "2020-03-02",
+      "apiSecretKey": "sk_test_4O18DZiH6xZz7b4Dy7GkkNgM006mqb1PcO",
+      "messagingFee": "0.05"
+    }
+  },
+  "storage": {
+    "endpoint": "https://staging2.greendirect.com",
+    "aws": {
+      "s3": {
+        "apiVersion": "2006-03-01",
+        "region": "us-west-2",
+        "bucket": "staging-assets.greendirect.com",
+        "buildBucket": "greendirect-api-staging",
+        "endpoint": "https://s3.us-west-2.amazonaws.com",
+        "s3ForcePathStyle": true,
+        "useAccelerateEndpoint": true,
+        "accessKeyId": "AKIATQVGNTK6COEACUNU",
+        "secretAccessKey": "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"
+      }
+    }
+  },
+  "notification": {
+    "aws": {
+      "sns": {
+        "topicArn": "arn:aws:sns:us-west-2:241940929212:greendirect-staging"
+      }
+    }
+  },
+  "email": {
+    "settings": {
+      "SES": true
+    },
+    "clientBaseUrl": "https://staging2.greendirect.com",
+    "forceEmbeddedImages": false,
+    "templateDir": "/public/templates",
+    "templateEngine": "PUG",
+    "registration": {
+      "isEmailVerification": false
+    }
+  },
+  "client": {
+    "aws": {
+      "accessKeyId": "AKIATQVGNTK6COEACUNU",
+      "secretAccessKey": "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",
+      "region": "us-east-1",
+      "bucket": "staging.greendirect.com",
+      "ecs": {
+        "region": "us-west-2",
+        "cluster": "greendirect-staging-cluster",
+        "container": "greendirect-staging-container",
+        "family": "greendirect-staging",
+        "taskDefinition": "greendirect-staging:3",
+        "subnets": ["subnet-1e8b0067"],
+        "securityGroups": ["sg-0773161edc0d56406"]
+      }
+    }
+  },
+  "analytics": {
+    "appstore": {
+      "appSKU": "greendirect_ios",
+      "apiKey": "VY45B9U63G",
+      "issuerId": "c02ffedd-a99d-49da-9296-48f70342429a",
+      "vendorNumber": "87950348"
+    },
+    "googleplay": {
+      "clientEmail": "cms-reports-generator-user@green-direct-app.iam.gserviceaccount.com",
+      "bucketId": "pubsite_prod_rev_05919397530125987397",
+      "appPackageName": "com.greendirect.android3"
+    },
+    "google": {
+      "clientEmail": "cms-reports-generator-user@green-direct-app.iam.gserviceaccount.com",
+      "viewId": "186163699"
+    }
+  }
+}
